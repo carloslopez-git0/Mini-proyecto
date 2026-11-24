@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de inicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Bienvenido</h1>
+        <h2 id="bienvenida"></h2>
+        <p>Has iniciado sesión correctamente.</p>
+        <button id="cerrarSesion">Cerrar sesión</button>
+
+    </div>
+
+    <div class="contenedor linux">
+        <h1>Registro de Pingüinos Linux 🐧</h1>
+        <p>Llena todo o la terminal se enoja.</p>
+
+        <form id="formLinux">
+
+            <label class="campo">Nombre
+                <input type="text" name="nombre" placeholder="Ej: Carlos, futuro admin de sistemas">
+            </label>
+
+            <label class="campo">Apodo en la terminal
+                <input type="text" name="apodo_terminal" placeholder="Ej: root_del_barrio">
+            </label>
+
+            <label class="campo">Edad
+                <input type="number" name="edad" min="1" placeholder="Ej: 18">
+            </label>
+
+            <label class="campo">Distro favorita
+                <select name="distro">
+                    <option value="">-- Elige tu distro --</option>
+                    <option value="Arch Linux">Arch Linux (por cierto, uso Arch)</option>
+                    <option value="Linux Mint">Linux Mint</option>
+                    <option value="Ubuntu">Ubuntu</option>
+                    <option value="Debian">Debian</option>
+                    <option value="Fedora">Fedora</option>
+                    <option value="Otra">Otra (hay mil)</option>
+                </select>
+            </label>
+
+            <label class="campo">Entorno de escritorio
+                <select name="escritorio">
+                    <option value="">-- Elige tu escritorio --</option>
+                    <option value="Hyprland">Hyprland (bonito y animado)</option>
+                    <option value="GNOME">GNOME</option>
+                    <option value="KDE Plasma">KDE Plasma</option>
+                    <option value="XFCE">XFCE</option>
+                    <option value="i3">i3 (solo teclado)</option>
+                </select>
+            </label>
+
+            <div class="campo">
+                <span>Editor de texto</span>
+                <div class="opciones">
+                    <label><input type="radio" name="editor" value="Vim">Vim (¿cómo salgo?)</label>
+                    <label><input type="radio" name="editor" value="Nano">Nano</label>
+                    <label><input type="radio" name="editor" value="VS Code">VS Code</label>
+                    <label><input type="radio" name="editor" value="Emacs">Emacs</label>
+                </div>
+            </div>
+
+            <label class="campo">Años usando Linux
+                <input type="number" name="anios_linux" min="0" placeholder="Ej: 1">
+            </label>
+
+            <label class="campo">Veces que rompiste el sistema
+                <input type="number" name="sistemas_rotos" min="0" placeholder="Ej: 3 (y las que vienen)">
+            </label>
+
+            <label class="campo">Comando favorito
+                <input type="text" name="comando_favorito" placeholder="Ej: sudo pacman -Syu">
+            </label>
+
+            <label class="campo">Terminal favorita
+                <select name="terminal">
+                    <option value="">-- Elige tu terminal --</option>
+                    <option value="kitty">kitty</option>
+                    <option value="alacritty">alacritty</option>
+                    <option value="gnome-terminal">gnome-terminal</option>
+                    <option value="konsole">konsole</option>
+                </select>
+            </label>
+
+            <div class="campo">
+                <span>¿Le dices a todos que usas Arch?</span>
+                <div class="opciones">
+                    <label><input type="radio" name="usa_arch_btw" value="Si, por cierto">Sí, por cierto</label>
+                    <label><input type="radio" name="usa_arch_btw" value="No, soy humilde">No, soy humilde</label>
+                </div>
+            </div>
+
+            <label class="campo">Felicidad con Linux (1 a 10)
+                <input type="range" name="felicidad" min="1" max="10" value="10">
+            </label>
+
+            <label class="campo">Fecha en que instalaste Linux
+                <input type="date" name="fecha_instalacion">
+            </label>
+
+            <label class="campo">Lenguaje de programación favorito
+                <input type="text" name="lenguaje" placeholder="Ej: JavaScript">
+            </label>
+
+            <label class="campo">Mensaje para Windows
+                <textarea name="mensaje_a_windows" rows="3" placeholder="Ej: Gracias por todo, pero ya no me reinicies solo"></textarea>
+            </label>
+
+            <div class="campo">
+                <label><input type="checkbox" name="acepto_no_volver" value="Acepto, jamas volvere">Prometo que no volveré a esperar actualizaciones de Windows</label>
+            </div>
+
+            <button type="submit">sudo registrar</button>
+
+        </form>
+
+        <p id="mensajeLinux"></p>
+    </div>
+
+    <div class="contenedor linux">
+        <h2>Registros guardados</h2>
+        <div id="listaRegistros"></div>
+    </div>
+
+    <script src="js/inicio.js"></script>
+</body>
+</html>
